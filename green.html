@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  nav {
+    background-color: black;
+  }
+
+  .home {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 12s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    padding-top: 70px;
+  }
+
+  .text1,
+  .text2,
+  .text3 {
+    position: absolute;
+    opacity: 0;
+    animation: textFade 12s infinite;
+  }
+
+  .text2 {
+    animation-delay: 4s;
+  }
+
+  .text3 {
+    animation-delay: 8s;
+  }
+
+  @keyframes bgChange {
+
+    0%,
+    33% {
+      background-image: url(green1.jpg);
+    }
+
+    34%,
+    66% {
+      background-image: url(green2.jpg);
+    }
+
+    67%,
+    100% {
+      background-image: url(green3.jpg);
+    }
+  }
+
+  @keyframes textFade {
+
+    0%,
+    8.33% {
+      opacity: 1;
+    }
+
+    33.33%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .col {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .col:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  /* .card-title{
+  color: ;
+} */
+  footer {
+    background-color: black;
+    height: 100px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footers {
+    color: rgba(255, 255, 255, 0.733);
+    justify-content: center;
+    display: flex;
+  }
+
+  .ptag {
+    color: white;
+    justify-content: center;
+    display: flex;
+  }
+  .about{
+    display: flex;
+    gap: 5px;
+    padding-top:70px;
+
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <!-- Brand on the left -->
+      <a class="navbar-brand  text-white" href="#">TravelGreen</a>
+
+      <!-- Toggler for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links on the right -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#pack">Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#foot">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="home" id="home">
+      <div class="text1">Experience The Green</div>
+      <div class="text2">Feel Relaxed</div>
+      <div class="text3">Enjoy Your Journey</div>
+    </div>
+    <div class="card bg-dark text-white" id="about">
+      <img src="darkforest.jpg" class="card-img" alt="..." style="background-size:cover;height: 95vh;">
+      <div class="card-img-overlay">
+        <h1 class="card-title" style="text-align: center;padding-top:10vh;padding-left: 600px;">About Us</h1>
+        <div class="about">
+          <img src="tglogo.png" style="border-radius:35%;" alt="" height="400px" width="500px">
+          <p class="card-text" style="text-align: center;margin-left:200px;font-size: xx-large;font-family:Copperplate;">
+            At TravelEase, we believe travel is more than just visiting new places — it's about creating unforgettable
+            experiences.<br>
+            With years of industry expertise, our passionate team curates personalized travel packages that blend
+            adventure, culture, and comfort.
+            Whether you're dreaming of a tropical escape, a cultural city tour, or an off-the-beaten-path adventure,<br>
+            we're here to make it happen. Let us handle the planning, so you can focus on making memories that last
+            a
+            lifetime.</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-3 g-4" id="pack" style="padding-top: 40px;">
+      <div class="col">
+        <div class="card">
+          <img src="cliff.jpg" class="card-img-top" alt="..." style="padding-left: 5px;">
+          <div class="card-body">
+            <h5 class="card-title">Geminy Hills</h5>
+            <p class="card-text">A hill viewpoint offers a breathtaking panoramic vista of the surrounding landscape,
+              where rolling hills, valleys,
+              and distant horizons come together in a stunning natural display.
+              It’s a serene spot perfect for photography, quiet reflection, or simply soaking in the beauty of nature
+              from above.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="forest.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amazone Forest</h5>
+            <p class="card-text"> provides a captivating overlook of dense, green canopies stretching as far as the eye
+              can see.
+              From this elevated spot, you can witness the rich layers of trees, the play of sunlight filtering through
+              leaves, and perhaps even spot
+              wildlife in their natural habitat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="hill.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Kim Mount</h5>
+            <p class="card-text">offers a majestic and awe-inspiring perspective, where towering peaks, deep valleys,
+              and winding trails unfold beneath you.
+              From this lofty perch, the crisp mountain air and sweeping views create a sense of peace and wonder,
+              making it a perfect spot to connect with nature and take in the grandeur of the highlands.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="hilltop.jpg" class="card-img-top" alt="..." style="padding-left: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Western Hills</h5>
+            <p class="card-text">A hilltop with a forest below offers a stunning blend of elevation and lush greenery.
+              From this vantage point,
+              you can gaze down at the vast expanse of treetops, watching how the forest stretches and rolls with the
+              landscape. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="mountsea.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Strange Bay</h5>
+            <p class="card-text"> The vast, shimmering ocean stretches to the horizon, while the rugged mountain rises
+              proudly beside it,
+              creating a striking contrast between calm waves and towering stone.
+              It's a place where nature’s power and beauty converge, offering a tranquil yet awe-inspiring escape.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="snow.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mount Edmond</h5>
+            <p class="card-text">The crisp air and stillness amplify the majestic beauty of the scene, with each slope
+              and ridge etched in delicate detail.
+              It's a timeless, awe-inspiring sight that captures the purity and grandeur of nature at its most peaceful
+              and powerful.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="foot">
+    <p class="ptag">copy@2025 vishnu@gmail.com</p>
+    <h4 class="footers">Services</h4>
+    <div class="links">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-google"></i></a>
+      <a href=""><i class="fa-brands fa-chrome"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-threads"></i></a>
+
+    </div>
+  </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
